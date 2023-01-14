@@ -1,0 +1,84 @@
+.navbar {
+    max-width:100%;
+    padding:30px 40px;
+    display : flex;
+    align-Items : center;
+    justify-content: space-between;
+    flex-direction : row;
+    border-bottom:1px solid white;
+    position: sticky;
+    top : 0;
+    background : linear-gradient(to left,#000,#123);
+    z-index:1;
+}
+.leftNav{
+    display : flex;
+    align-items:center;
+}
+.logo {
+    height:70px;
+}
+.heading{
+    font-weight : bolder;
+    font-size: 45px;
+    margin : 0;
+    padding : 0;
+    color : white
+}
+.navButton{
+    border : 1px solid white;
+    padding : 10px 15px;
+    font-size:17px;
+    border-radius:5px;
+    color : white;
+    cursor:pointer;
+}
+.navButton:hover{
+    transform: translateY(-10px);
+}
+.largeNav{
+    display : flex;
+    gap:15px;
+}
+.smallNav{
+    display : none;
+}
+.menu{
+    min-width:200px;
+    font-size: 20px;
+    background : none;
+    border : 1px solid grey;
+    color : white;
+}
+.a{
+    color : white;
+    text-decoration : none;
+}
+.menuItem{
+    
+    padding:10px;
+    font-size:16px;
+    border:none;
+    color : white;
+    background:none;
+    justify-content:center;
+    cursor:pointer;
+}
+.menuItem:hover{
+    background : #d8c3a5;
+    color : #e85a4f
+}
+@media all and (max-width : 950px) and (min-width: 200px){
+    .largeNav{
+        display : none;
+    }
+    .smallNav{
+        display : block;
+    }
+}
+@media all and (max-width : 350px) and (min-width: 200px){
+    
+    .logo{
+        display : none;
+    }
+}
