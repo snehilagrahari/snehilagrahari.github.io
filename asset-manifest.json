@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.853b3c79.css",
-    "main.js": "/static/js/main.02578f50.js",
+    "main.css": "/static/css/main.15f09321.css",
+    "main.js": "/static/js/main.701bad37.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/Travelocity.png": "/static/media/Travelocity.1b075dd668a6cec0789f.png",
+    "static/media/Timelancer.png": "/static/media/Timelancer.a5ffa5dffef568c76d2d.png",
+    "static/media/Kickstarter.png": "/static/media/Kickstarter.81f520b98995d25285d8.png",
     "static/media/Image.png": "/static/media/Image.67dde6883fa8da7bfa6a.png",
+    "static/media/stackoverflow.png": "/static/media/stackoverflow.aa754ecdafba79f11652.png",
     "static/media/reactjs.svg": "/static/media/reactjs.e7574af26628c8d8cc52d64e015eb898.svg",
-    "static/media/logo192.png": "/static/media/logo192.ae1bd15fd2c781de4ab0.png",
     "static/media/nodejs.svg": "/static/media/nodejs.cccdafa931eebdaea49f5c5ac3ba232f.svg",
     "static/media/redux.svg": "/static/media/redux.0a4a6ca2be44339bedb69de15f66d243.svg",
     "static/media/express.svg": "/static/media/express.c421a906cdf9fbfd311d16f731edaad1.svg",
@@ -17,12 +20,12 @@
     "static/media/css3.svg": "/static/media/css3.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/chakraUI.svg": "/static/media/chakraUI.cf914ef86bb989cd35f1f4e4235fba6c.svg",
     "static/media/html-5.svg": "/static/media/html-5.c1bb84e022ca9d76984d4b943bd678fd.svg",
-    "main.853b3c79.css.map": "/static/css/main.853b3c79.css.map",
-    "main.02578f50.js.map": "/static/js/main.02578f50.js.map",
+    "main.15f09321.css.map": "/static/css/main.15f09321.css.map",
+    "main.701bad37.js.map": "/static/js/main.701bad37.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.853b3c79.css",
-    "static/js/main.02578f50.js"
+    "static/css/main.15f09321.css",
+    "static/js/main.701bad37.js"
   ]
 }
