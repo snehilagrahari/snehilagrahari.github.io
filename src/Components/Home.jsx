@@ -7,9 +7,9 @@ const Home = () => {
   const str = "</>"
   return (
     <div id='home' className={styles.parentContainer}>
-      <div>
+      <div className={styles.left}>
         <p className={styles.hey}>
-          Hey!
+          Hey
         </p>
         <p className={styles.name}>
           I am <span className={styles.full}>Snehil Agrahari</span>
