@@ -85,12 +85,12 @@ const Projects = () => {
                     <Text color="whiteAlpha.700">{project.description}</Text>
                     <Text fontSize="xl" color="whiteAlpha.800">Project Duration : <Tag color="black" bgColor="whiteAlpha.700" as='span'>{project.projectDuration}</Tag></Text>
                     <HStack padding={3} gap={5}>
-                      <a target="_blank" rel="noreferrer" href="https://travelocity-zeta.vercel.app">
+                      <a target="_blank" rel="noreferrer" href={project.deployLink}>
                         <AiOutlineLink color={'white'} data-for="link" data-tip cursor="pointer" size="35px"/>
                         <ReactTooltip id="link" ><span>Deployed Link</span></ReactTooltip>
                       </a>
                      
-                      <a target="_blank" rel="noreferrer" href="https://github.com/snehilagrahari/tame-porter-1759">
+                      <a target="_blank" rel="noreferrer" href={project.githubLink}>
                         <BsGithub color={'white'} data-for="github" data-tip cursor="pointer" size="35px"/>
                         <ReactTooltip id="github"><span>Github</span></ReactTooltip>
                       </a>

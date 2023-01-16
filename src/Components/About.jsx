@@ -17,7 +17,7 @@ const About = () => {
             <VStack alignItems="flex-start" flex={6}>
                 <Text fontSize="2xl" color="white">A passionate full-stack web developer at Masai School, Bangalore. Loves to build useful and attractive websites. A team player with good skills and mindset. Wants to be recognized across the globe for his work.</Text>
                 <Center padding="20px 0px">
-                  <Button variant={'solid'} colorScheme="blue" fontFamily="heading" fontSize={20}><a href={pdf} target="_blank" >See my Resume</a></Button>
+                  <Button variant={'solid'} colorScheme="blue" fontFamily="heading" fontSize={20}><a href={pdf} target="_blank" download>See my Resume</a></Button>
                 </Center>
                 <Heading size="md" color="white">Get in Touch</Heading>
                 <HStack gap={3} padding="10px 0px">
@@ -33,7 +33,7 @@ const About = () => {
                       <ReactTooltip id="Linkedin">Linkedin</ReactTooltip>
                   </Circle>
                   </a>
-                  <a href="sag21062001@outlook.com">
+                  <a href="#contact">
                   <Circle padding="10px" bgColor="white" >
                     <BsFillEnvelopeFill color="black" size="25px" cursor="pointer" data-tip data-for="Email" />
                       <ReactTooltip id="Email">Email</ReactTooltip>
