@@ -68,14 +68,14 @@ const Skills = () => {
   ]
 
   return (
-    <div id="skills" style={{width : "80%", margin:'auto', padding :" 100px 20px 40px 20px"}}>
-        <Heading size="3xl" textAlign="center" color="white">
-            Skills & Tools
+    <div id="skills" style={{width : "90%", margin:'auto', padding :" 100px 20px 40px 20px"}}>
+        <Heading size="3xl" textAlign="right" color="white">
+        <Text as="span" color="#cc93d1">S</Text>kills & <Text as="span" color="#cc93d1">T</Text>ools
         </Heading>
         <Divider zIndex={-1} />
-        <SimpleGrid columns={{sm : 1,md : 2,lg : 2, xl : 3, '2xl' : 4 , base : 1}} gap={5} padding={5} marginTop={12}>
+        <SimpleGrid columns={{sm : 2,md : 2,lg : 2, xl : 3, '2xl' : 4 , base : 1}} gap={5} padding={3} marginTop={10}>
             {
-              skills.map(el=><Flex direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} key={el.name} padding={5} bgColor='#050b10' borderRadius="md" height="200px" gap={2}>
+              skills.map(el=><Flex direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
                 <Image src={el.src} alt="SKILL" maxH="150px" maxW="100px" minH="100px" minW="100px" borderRadius="xl" />
                 <Text fontSize="xl" textAlign="" fontWeight="bold" color ="white">{el.name}</Text>
                 </Flex>)

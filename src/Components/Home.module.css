@@ -40,7 +40,7 @@
     font-size:100px;
     padding : 20px;
     font-family :  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color : orange;
+    color : #cc93d1;
 }
 
 @media all and (max-width : 600px ) and (min-width : 200px ){

@@ -8,7 +8,7 @@
     border-bottom:1px solid white;
     position: sticky;
     top : 0;
-    background : linear-gradient(to left,#000,#123);
+    background : linear-gradient(to left,#000,#1e141f);
     z-index:1;
 }
 .leftNav{

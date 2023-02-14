@@ -11,6 +11,23 @@ const Projects = () => {
 
   const projectList=[
     {
+      id : 0,
+      name : "Home Decor",
+      deployLink : "https://home-decor-omega.vercel.app",
+      githubLink : "https://github.com/snehilagrahari/home-decor",
+      imageLink : "https://user-images.githubusercontent.com/112630634/213929836-17fec47c-a276-41e5-8012-1566c3c33a0d.png",
+      description : "Home Decor is an E-commerce website which provides a user with variety of products, varying from day-to-day groceries to fashionable and trendy clothing. User can place order with any number of products in cart.",
+      techStack : [
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux", 
+        "Chakra-UI"
+      ],
+      projectType :"Collaborative Project",
+      projectDuration : "5 Days"
+    },
+    {
       id : 1,
       name : "Travelocity",
       deployLink : "https://travelocity-zeta.vercel.app",
@@ -63,27 +80,30 @@ const Projects = () => {
 
   return (
     <div id="projects" style={{width : "90%", margin : "auto", padding : "100px 20px 20px 20px"}}>
-        <Heading textAlign="center" w="90%" margin="auto" size={'3xl'} color="white">Projects</Heading>
+        <Heading textAlign="right" w="100%" margin="auto" size={'3xl'} color="white"><Text as="span" color="#cc93d1">P</Text>rojects</Heading>
         <Divider zIndex={-1} />
         <VStack marginTop={10} padding={5} gap={5}>
           {
             projectList.map((project,i)=>{
               return (
-                <Stack key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} gap={10} padding={10} background="#060c11" borderRadius={'xl'}>
+                <Stack key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} gap={10} padding={10} background="#0f0a0f" borderRadius={'xl'} alignItems="center">
                   <Box flex={6}>
-                    <Image src={project.imageLink} alt={project.name} maxH="100%" minH="80%" maxW="100%" />
+                    <Image src={project.imageLink} alt={project.name} maxH="100%" minH={{base :"250px" , sm:'250px',md:'300px',lg:'350px'}} maxW="100%" />
                   </Box>
                   <VStack gap={2} padding={3} flex={4} alignItems="start">
-                    <Heading size="xl" color={'white'}>{project.name}</Heading>
+                    <Heading size="xl" color={'purple'}>{project.name}</Heading>
                     <Tag fontSize="lg">{project.projectType}</Tag>
                     
                     <HStack flexWrap="wrap" rowGap={2}>
                     {
-                      project.techStack.map((el)=><Tag key={el} fontSize="md" bgColor={"blue.200"} color="black">{el}</Tag>)
+                      project.techStack.map((el)=><Tag key={el} fontSize="md" bgColor={"#cc93d1"} color="black">{el}</Tag>)
                     }
                     </HStack>
                     <Text color="whiteAlpha.700">{project.description}</Text>
-                    <Text fontSize="xl" color="whiteAlpha.800">Project Duration : <Tag color="black" bgColor="whiteAlpha.700" as='span'>{project.projectDuration}</Tag></Text>
+                    <HStack fontSize="xl" alignItems="center" color="whiteAlpha.800">
+                      <Text>Project Duration :</Text> 
+                      <Tag color="black" bgColor="whiteAlpha.700" as='span'>{project.projectDuration}</Tag>
+                    </HStack>
                     <HStack padding={3} gap={5}>
                       <a target="_blank" rel="noreferrer" href={project.deployLink}>
                         <AiOutlineLink color={'white'} data-for="link" data-tip cursor="pointer" size="35px"/>
