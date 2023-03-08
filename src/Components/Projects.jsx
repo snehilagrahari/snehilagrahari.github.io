@@ -11,6 +11,7 @@ const Projects = () => {
 
   const projectList=[
     {
+
       id : 0,
       name : "Home Decor",
       deployLink : "https://home-decor-omega.vercel.app",

@@ -1,12 +1,39 @@
-import { VStack, Divider, Heading, HStack, Text, Input, FormLabel, Textarea, InputGroup, InputLeftElement, Button, Stack} from '@chakra-ui/react'
-import React from 'react'
+import { VStack, Divider, Heading, HStack, Text, Input, Textarea, InputGroup, InputLeftElement, Button, Stack, useToast} from '@chakra-ui/react'
+import React, { useState } from 'react'
 import {BsLinkedin,BsGithub,BsFillEnvelopeFill,BsFillTelephoneFill} from 'react-icons/bs'
 import {GoLocation} from 'react-icons/go'
 import {FiUser} from 'react-icons/fi'
 
 const Contact = () => {
+
+  const toast = useToast();
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleSubmit = (e)=>{
     e.preventDefault();
+    if(name.trim()!=="" && email.trim()!=="" && message.trim()!==""){
+      setName("");
+      setEmail("");
+      setMessage("");
+      toast({
+        title : "Your message has been sent!",
+        position : "top-center",
+        duration : 1000,
+        status : 'success',
+        isClosable : true
+      })
+    }
+    else
+      toast({
+        title : "All fields are required",
+        description : "Some fields are not filled!",
+        status : "error",
+        position : 'top-center',
+        duration : 1000,
+        isClosable : true
+      })
 
   }
   return (
@@ -21,16 +48,16 @@ const Contact = () => {
                     pointerEvents='none'
                     children={<FiUser color='white' />}
                   />
-                  <Input type='tel' placeholder='Enter Your Name' color="white" />
+                  <Input value={name} onChange={(e)=>setName(e.target.value)} type='text' placeholder='Enter Your Name' color="white" />
                 </InputGroup>
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents='none'
                     children={<BsFillEnvelopeFill color='white' />}
                   />
-                  <Input type='tel' placeholder='Enter Your Email' color={'white'} />
+                  <Input type='email' value={email} onChange={(e)=>setEmail(e.target.value)} placeholder='Enter Your Email' color={'white'} />
                 </InputGroup>
-                <Textarea placeholder='Message' color="white" />
+                <Textarea placeholder='Message' value={message} onChange={(e)=>setMessage(e.target.value)} color="white" />
                 <Button type="submit" bgColor="#cc93d1" fontSize="14px" textAlign="center">Send Message</Button>
             </VStack>
           </form>

@@ -1,11 +1,16 @@
 import React from 'react'
 import styles from "./Navbar.module.css"
-import {FaBars} from 'react-icons/fa'
-import {Menu,MenuButton,MenuList,MenuItem , Button} from '@chakra-ui/react'
-import pdf from '../downloads/Snehil_Agrahari_Resume.pdf'
+import {useDisclosure} from '@chakra-ui/react'
+import pdf from '../downloads/fw21_1171_Snehil_Agrahari_Resume.pdf'
+import NavbarDrawer from './NavbarDrawer'
 
 const Navbar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const link="https://drive.google.com/file/d/11qpa3yYgyWBe8SCwkltHt59UkYYvYIQE/view?usp=share_link";
 
+    const handleResume = ()=>{
+        window.open(link);
+    }
   return (
     <div className={styles.navbar}>
         <div className={styles.leftNav}>
@@ -18,23 +23,28 @@ const Navbar = () => {
             <a href="#stats"><button className={styles.navButton}>Stats</button></a>
             <a href="#projects"><button className={styles.navButton}>Projects</button></a>
             <a href="#contact"><button className={styles.navButton}>Contact</button></a>
-            <button className={styles.navButton}><a href={pdf} target="_blank" download >Resume</a></button>
+            <a href={pdf} download="fw21_1171_Snehil_Agrahari_Resume" >
+                <button className={styles.navButton} onClick={handleResume}>
+                    Resume
+                </button>
+            </a>
         </div>
         <div className={styles.smallNav}>
-            <Menu>
+            {/* <Menu>
                 <MenuButton as={Button} bgColor="none">
                     <FaBars />
                 </MenuButton>
                 <MenuList bgColor={'black'}>
-                    <MenuItem className={styles.menuItem}><a href="#home">Home</a></MenuItem>
-                    <MenuItem className={styles.menuItem}><a href="#about">About</a></MenuItem>
-                    <MenuItem className={styles.menuItem}><a href="#skills">Skills</a></MenuItem>
-                    <MenuItem className={styles.menuItem}><a href="#stats">Stats</a></MenuItem>
-                    <MenuItem className={styles.menuItem}><a href="#projects">Projects</a></MenuItem>
-                    <MenuItem className={styles.menuItem}><a href="#contact">Contact</a></MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>Home</MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>About</MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>Skills</MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>Stats</MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>Projects</MenuItem>
+                    <MenuItem className={styles.menuItem} onClick={()=>window.location.assign('#about')}>Contact</MenuItem>
                     <MenuItem className={styles.menuItem}><a href={pdf} target="_blank" download >Resume</a></MenuItem>
                 </MenuList>
-            </Menu>
+            </Menu> */}
+            <NavbarDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} pdf={pdf} />
         </div>
     </div>
   )

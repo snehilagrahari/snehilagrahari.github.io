@@ -20,7 +20,7 @@
 }
 .heading{
     font-weight : bolder;
-    font-size: 45px;
+    font-size: 40px;
     margin : 0;
     padding : 0;
     color : white
@@ -70,6 +70,9 @@
     color : #e85a4f
 }
 @media all and (max-width : 950px) and (min-width: 200px){
+    .heading{
+        display : block;
+    }
     .largeNav{
         display : none;
     }
@@ -79,6 +82,9 @@
 }
 @media all and (max-width : 350px) and (min-width: 200px){
     
+    .heading{
+        display: none;
+    }
     .logo{
         display : none;
     }

@@ -1,4 +1,4 @@
-import {  Center, Divider, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import {  Divider, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import image1 from '../Icons/html-5.svg'
 import image2 from '../Icons/css3.svg'

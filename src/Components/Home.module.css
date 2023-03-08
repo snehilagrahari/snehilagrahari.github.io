@@ -1,16 +1,17 @@
 .parentContainer{
     width : 100%;
-    padding:100px 2px 140px 2px;
+    padding:100px 60px 140px 60px;
     margin:auto;
     display : flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-image : url("https://images.unsplash.com/photo-1517512006864-7edc3b933137?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     background-size:cover;
     background-position : center;
+    height : '100vh';
 }
 .hey{
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 900;
     font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin : 0px;
@@ -20,18 +21,18 @@
 .name {
     font-family :  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin:0px;
-    font-size:60px;
+    font-size:40px;
     font-weight:900;
     color : white;
 }
 .full{
     color : cornflowerblue;
     font-weight : 900;
-    font-size: 60px;
+    font-size: 40px;
 }
 .developer{
     color : white;
-    font-size: 60px;
+    font-size: 30px;
     margin : 0px;
     font-weight : 900;
     font-family :  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -43,10 +44,17 @@
     color : #cc93d1;
 }
 
-@media all and (max-width : 600px ) and (min-width : 200px ){
+@media all and (max-width : 800px ) and (min-width : 200px ){
     .parentContainer{
         flex-direction : column-reverse;
-        padding :20px;
+        justify-content: space-evenly;
+        padding : 100px 20px 100px 20px;
+    }
+    .name{
+        text-align : center;
+    }
+    .hey{
+        text-align:center
     }
     
 }

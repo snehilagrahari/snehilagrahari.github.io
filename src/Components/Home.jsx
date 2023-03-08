@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Home.module.css'
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Home = () => {
@@ -9,13 +10,10 @@ const Home = () => {
     <div id='home' className={styles.parentContainer}>
       <div className={styles.left}>
         <p className={styles.hey}>
-          Hey
+          Hello, Welcome!
         </p>
         <p className={styles.name}>
-          I am <span className={styles.full}>Snehil Agrahari</span>
-        </p>
-        <p className={styles.developer}>
-          A Full Stack Web Developer
+          I am <span style={{color: "magenta"}}><Typewriter typeSpeed={100} deleteSpeed={60} loop={0} words={['Snehil Agrahari','a Full Stack Web Developer']}/></span>
         </p>
       </div>
       <div>
