@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Home.module.css'
 import { Typewriter } from 'react-simple-typewriter'
 
+//aos import
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 const Home = () => {
+
+
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
 
   const str = "</>"
   return (

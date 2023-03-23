@@ -1,11 +1,18 @@
 import { Button, Center, Divider, Flex, Heading, Image, Text, VStack,HStack,Circle } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './About.module.css'
 import image from '../Image.png'
 import {BsFillEnvelopeFill, BsGithub, BsLinkedin} from 'react-icons/bs'
 import {BsDownload} from 'react-icons/bs'
 import ReactTooltip from 'react-tooltip'
 import pdf from "../downloads/fw21_1171_Snehil_Agrahari_Resume.pdf"
+
+//aos import 
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 const About = () => {
 
 
@@ -13,9 +20,14 @@ const About = () => {
     window.open("https://drive.google.com/file/d/11qpa3yYgyWBe8SCwkltHt59UkYYvYIQE/view?usp=share_link")
   }
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div id="about" className={styles.parentContainer}>
-        <Heading textAlign="right" size="3xl" className={styles.head}><Text as="span" color="#cc93d1">A</Text>bout <Text as="span" color="#cc93d1">M</Text>e</Heading>
+        <Heading data-aos="fade-up" textAlign="right" size="3xl" className={styles.head}><Text as="span" color="#cc93d1">A</Text>bout <Text as="span" color="#cc93d1">M</Text>e</Heading>
         <Divider zIndex={-1}/>
         <Flex direction={{sm : "column", md : "column", lg : 'row', xl : 'row', '2xl':'row', base : 'column'}} gap="40px" alignItems="center" margin="60px 0px">
             <Center width={{sm : "300px",md: "400px", lg : '400px', xl : '400px', '2xl' : '400px'}} padding={2} flex={4} w="100%">

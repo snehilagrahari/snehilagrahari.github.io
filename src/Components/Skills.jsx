@@ -1,5 +1,5 @@
 import {  Divider, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import image1 from '../Icons/html-5.svg'
 import image2 from '../Icons/css3.svg'
 import image3 from '../Icons/javascript.svg'
@@ -12,6 +12,12 @@ import image9 from '../Icons/Typescript.png'
 import image10 from '../Icons/chakraUI.svg'
 import image11 from '../Icons/material-ui.svg'
 import image12 from '../Icons/git.svg'
+
+//aos import 
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Skills = () => {
 
   const skills = [
@@ -67,6 +73,11 @@ const Skills = () => {
 
   ]
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div id="skills" style={{width : "90%", margin:'auto', padding :" 100px 20px 40px 20px"}}>
         <Heading size="3xl" textAlign="right" color="white">
@@ -75,7 +86,7 @@ const Skills = () => {
         <Divider zIndex={-1} />
         <SimpleGrid columns={{sm : 2,md : 2,lg : 2, xl : 3, '2xl' : 4 , base : 1}} gap={5} padding={3} marginTop={10}>
             {
-              skills.map(el=><Flex direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
+              skills.map((el,i)=><Flex data-aos="fade-down" direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
                 <Image src={el.src} alt="SKILL" maxH="150px" maxW="100px" minH="100px" minW="100px" borderRadius="xl" />
                 <Text fontSize="xl" textAlign="" fontWeight="bold" color ="white">{el.name}</Text>
                 </Flex>)

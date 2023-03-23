@@ -1,5 +1,5 @@
 import { Box, Divider, Heading, HStack, Image, Stack, Tag, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import image1 from "../ProjectImages/Travelocity.png"
 import image2 from "../ProjectImages/Timelancer.png"
 import image3 from "../ProjectImages/Kickstarter.png"
@@ -7,7 +7,15 @@ import {BsGithub} from 'react-icons/bs'
 import {AiOutlineLink} from 'react-icons/ai'
 import ReactTooltip from 'react-tooltip'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 const Projects = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const projectList=[
     {
@@ -87,7 +95,7 @@ const Projects = () => {
           {
             projectList.map((project,i)=>{
               return (
-                <Stack key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} gap={10} padding={10} background="#0f0a0f" borderRadius={'xl'} alignItems="center">
+                <Stack data-aos="fade-left" key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} gap={10} padding={10} background="#0f0a0f" borderRadius={'xl'} alignItems="center">
                   <Box flex={6}>
                     <Image src={project.imageLink} alt={project.name} maxH="100%" minH={{base :"250px" , sm:'250px',md:'300px',lg:'350px'}} maxW="100%" />
                   </Box>
