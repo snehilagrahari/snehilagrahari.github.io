@@ -42,12 +42,16 @@ const Projects = () => {
       deployLink : "https://travelocity-zeta.vercel.app",
       githubLink : "https://github.com/snehilagrahari/tame-porter-1759",
       imageLink : image1,
-      description : "Travelocity is a platform where the users can enter the name of a place and find the hotels in that area and make a booking right away.",
+      description : "Travelocity is an online hotel booking/search website. It also offers you to make a booking for a hotel in your name and it can be cancelled prior to check-in date of booking.",
       techStack : [
         "CSS",
         "JavaScript",
         "React",
-        "Chakra-UI"
+        "Chakra-UI",
+        "NodeJS",
+        "MongoDB",
+        "Express",
+        "Mongoose"
       ],
       projectType :"Individual Project",
       projectDuration : "6 Days"
