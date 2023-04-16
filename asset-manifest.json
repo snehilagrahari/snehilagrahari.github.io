@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.75df9edf.css",
-    "main.js": "/static/js/main.c36270e7.js",
+    "main.js": "/static/js/main.08f453b9.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Travelocity.png": "/static/media/Travelocity.1b075dd668a6cec0789f.png",
-    "static/media/fw21_1171_Snehil_Agrahari_Resume.pdf": "/static/media/fw21_1171_Snehil_Agrahari_Resume.b0ffe7ddb1a24bee7699.pdf",
+    "static/media/fw21_1171_Snehil_Agrahari_Resume.pdf": "/static/media/fw21_1171_Snehil_Agrahari_Resume.6c7af5d87846076b436b.pdf",
     "static/media/Timelancer.png": "/static/media/Timelancer.a5ffa5dffef568c76d2d.png",
     "static/media/Kickstarter.png": "/static/media/Kickstarter.81f520b98995d25285d8.png",
     "static/media/Image.png": "/static/media/Image.67dde6883fa8da7bfa6a.png",
@@ -22,11 +22,11 @@
     "static/media/chakraUI.svg": "/static/media/chakraUI.cf914ef86bb989cd35f1f4e4235fba6c.svg",
     "static/media/html-5.svg": "/static/media/html-5.c1bb84e022ca9d76984d4b943bd678fd.svg",
     "main.75df9edf.css.map": "/static/css/main.75df9edf.css.map",
-    "main.c36270e7.js.map": "/static/js/main.c36270e7.js.map",
+    "main.08f453b9.js.map": "/static/js/main.08f453b9.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75df9edf.css",
-    "static/js/main.c36270e7.js"
+    "static/js/main.08f453b9.js"
   ]
 }
