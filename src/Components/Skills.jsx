@@ -13,6 +13,8 @@ import image10 from '../Icons/chakraUI.svg'
 import image11 from '../Icons/material-ui.svg'
 import image12 from '../Icons/git.svg'
 
+import style from './skills.module.css'
+
 //aos import 
 
 import AOS from "aos";
@@ -84,9 +86,9 @@ const Skills = () => {
         <Text as="span" color="#cc93d1">S</Text>kills & <Text as="span" color="#cc93d1">T</Text>ools
         </Heading>
         <Divider zIndex={-1} />
-        <SimpleGrid columns={{sm : 2,md : 2,lg : 2, xl : 3, '2xl' : 4 , base : 1}} gap={5} padding={3} marginTop={10}>
+        <SimpleGrid columns={{sm : 3,md :3,lg : 4, xl : 5, '2xl' : 5 , base : 1}} gap={5} padding={3} marginTop={10}>
             {
-              skills.map((el,i)=><Flex data-aos="fade-down" direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
+              skills.map((el,i)=><Flex className={style.skillCard}  direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
                 <Image src={el.src} alt="SKILL" maxH="150px" maxW="100px" minH="100px" minW="100px" borderRadius="xl" />
                 <Text fontSize="xl" textAlign="" fontWeight="bold" color ="white">{el.name}</Text>
                 </Flex>)

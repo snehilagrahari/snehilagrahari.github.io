@@ -37,7 +37,7 @@ const Contact = () => {
 
   }
   return (
-    <div id="contact" style={{width : "100%",background : "#1e141f", margin:'auto', padding :" 40px 10%"}}>
+    <div id="contact" style={{width : "100%",background : "#1e141f", margin:' 40px auto 0px auto', padding :" 40px 10%"}}>
         <Heading textAlign="center" color="white" size="3xl"><Text as="span" color="#cc93d1">G</Text>et <Text as="span" color="#cc93d1">i</Text>n <Text as="span" color="#cc93d1">T</Text>ouch</Heading>
         <Divider zIndex={-1} />
         <Stack direction={{base : 'column',sm: 'column', md : 'row',lg : 'row',xl:'row','2xl' : 'row'}} justifyContent={'center'} marginTop="30px">
