@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Navbar.module.css"
-import {useDisclosure} from '@chakra-ui/react'
+import {Image, Text, useDisclosure} from '@chakra-ui/react'
 import pdf from '../downloads/fw21_1171_Snehil_Agrahari_Resume.pdf'
 import NavbarDrawer from './NavbarDrawer'
+import monitor from '../Icons/monitor.png';
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [visible , setVisible] = useState(true)
     const link="https://drive.google.com/file/d/11qpa3yYgyWBe8SCwkltHt59UkYYvYIQE/view?usp=share_link";
+
+    useEffect(()=>{
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY === 0){
+                setVisible(true);
+            }
+            else {
+                setVisible(false);
+            }
+        })
+    },[]);
+
+    const text = `</>`;
 
     const handleResume = ()=>{
         window.open(link);
@@ -14,7 +29,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
         <div className={styles.leftNav}>
-            <p className={styles.heading}></p>
+            { "{ Snehil Agrahari }" }
         </div>
         <div className={styles.largeNav}>
             <a href="#"><button className={styles.navButton}>Home</button></a>

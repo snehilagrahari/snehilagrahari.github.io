@@ -1,12 +1,10 @@
 body{
     margin:0;
     padding :0;
-    background : black;
 }
 html{
     padding:0;
     scroll-behavior: smooth;
-    background :#1e141f;
     height : auto;
 }
 #root{

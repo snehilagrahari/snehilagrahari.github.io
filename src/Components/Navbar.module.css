@@ -1,20 +1,23 @@
 .navbar {
-    max-width:100%;
-    padding:30px 40px;
+    width: 100%;
+    position : sticky;
+    top : 0%;
     display : flex;
-    align-Items : center;
     justify-content: space-between;
-    flex-direction : row;
-    border-bottom:1px solid white;
-    position: sticky;
-    top : 0;
-    background : linear-gradient(to left,#000,#1e141f);
-    z-index:1;
+    align-items: center;
+    padding : 20px 40px;
+    background-color : white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index : 5;
 }
+
+/* background : d9d9d9 */
 .leftNav{
-    display : flex;
-    align-items:center;
+    color : #cf2129;
+    font-size : 40px;
+    font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .logo {
     height:70px;
 }
@@ -26,15 +29,20 @@
     color : white
 }
 .navButton{
-    border : 1px solid white;
+    border : 2px solid #ffe5e1;
     padding : 10px 15px;
     font-size:17px;
     border-radius:5px;
-    color : white;
+    font-weight : bold;
+    background : #ffe5e1;
+    color : #cf2129;
     cursor:pointer;
+    transition: 350ms;
 }
 .navButton:hover{
     transform: translateY(-10px);
+    background : white;
+    color : black;
 }
 .largeNav{
     display : flex;

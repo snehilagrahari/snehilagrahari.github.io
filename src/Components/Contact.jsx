@@ -37,10 +37,38 @@ const Contact = () => {
 
   }
   return (
-    <div id="contact" style={{width : "100%",background : "#1e141f", margin:' 40px auto 0px auto', padding :" 40px 10%"}}>
-        <Heading textAlign="center" color="white" size="3xl"><Text as="span" color="#cc93d1">G</Text>et <Text as="span" color="#cc93d1">i</Text>n <Text as="span" color="#cc93d1">T</Text>ouch</Heading>
-        <Divider zIndex={-1} />
-        <Stack direction={{base : 'column',sm: 'column', md : 'row',lg : 'row',xl:'row','2xl' : 'row'}} justifyContent={'center'} marginTop="30px">
+    <div id="contact" style={{width : "100%",background : "#cf2145", margin:' 80px auto 0px auto', padding :" 40px 10%"}}>
+        <Heading textAlign="center" color="white">Get in Touch</Heading>
+        <Stack direction={{sm : 'column', md : 'row'}} marginTop={10} justifyContent={'center'} alignItems={'center'}>
+          <HStack gap={6} padding="5px 0px" wrap="wrap" >
+            <HStack>
+              <BsFillTelephoneFill size="25px" color="white" />
+              <Text color="white">+91 77424 18503</Text>
+            </HStack>
+            <HStack>
+              <BsFillEnvelopeFill size="25px" color="white" />
+              <Text color="white">sag21062001@outlook.com</Text>
+            </HStack>
+            <HStack>
+              <GoLocation size="25px" color="white" />
+              <Text color="white">Lucknow, Uttar Pradesh</Text>
+            </HStack>
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/snehil-agrahari-996867241/">
+              <HStack>
+                <BsLinkedin color="white" size="30px"/>
+                <Text color="white">snehilagrahari</Text>
+              </HStack>
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/snehilagrahari">
+              <HStack>
+                <BsGithub color="white" size="30px"/>
+                <Text color="white">snehilagrahari</Text>
+              </HStack>
+            </a>
+          </HStack>
+          
+        </Stack>
+        {/* <Stack direction={{base : 'column',sm: 'column', md : 'row',lg : 'row',xl:'row','2xl' : 'row'}} justifyContent={'center'} marginTop="30px">
           <form onSubmit={handleSubmit}>
             <VStack gap={3} padding={4} alignItems={{base : 'center' ,sm:"center" , md:"flex-start"}}>
                 <InputGroup>
@@ -79,7 +107,7 @@ const Contact = () => {
                   <a target="_blank" rel="noreferrer" href="https://github.com/snehilagrahari"><BsGithub color="white" size="30px"/></a>
               </HStack>
           </VStack>
-        </Stack>
+        </Stack> */}
     </div>
   )
 }

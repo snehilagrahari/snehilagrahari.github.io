@@ -92,39 +92,38 @@ const Projects = () => {
   ]
 
   return (
-    <div id="projects" style={{width : "90%", margin : "auto", padding : "100px 20px 20px 20px"}}>
-        <Heading textAlign="right" w="100%" margin="auto" size={'3xl'} color="white"><Text as="span" color="#cc93d1">P</Text>rojects</Heading>
-        <Divider zIndex={-1} />
-        <VStack marginTop={10} padding={5} gap={5}>
+    <div id="projects" style={{width : "90%", margin : "auto", padding : "60px 20px 20px 20px"}}>
+        <Heading data-aos="fade-up" p={3} size="3xl" color="#cf2129" textAlign={"center"}>Projects</Heading>
+        <VStack marginTop={10} padding="20px" gap={5}>
           {
             projectList.map((project,i)=>{
               return (
-                <Stack data-aos="fade-left" key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} gap={10} padding={10} background="#0f0a0f" borderRadius={'xl'} alignItems="center">
-                  <Box flex={6}>
+                <Stack data-aos="fade-left" key={project.id} direction={{sm: 'column',md : 'column',lg : (i%2===0 )? 'row' :'row-reverse',xl : (i%2===0 )? 'row' :'row-reverse',"2xl" : (i%2===0 )? 'row' :'row-reverse', base : 'column'}} background = "white" borderRadius={'xl'} alignItems="stretch" border="1px solid #cf2129">
+                  <Box flex={6} padding="40px 60px" background="#ffcdcd" borderTopLeftRadius={i%2==0?'xl':"none"} borderBottomLeftRadius={i%2==0?'xl':"none"} borderTopRightRadius={i%2!=0?'xl':"none"} borderBottomRightRadius={i%2!=0?'xl':"none"}>
                     <Image src={project.imageLink} alt={project.name} maxH="100%" minH={{base :"250px" , sm:'250px',md:'300px',lg:'350px'}} maxW="100%" />
                   </Box>
-                  <VStack gap={2} padding={3} flex={4} alignItems="start">
-                    <Heading size="xl" color={'purple'}>{project.name}</Heading>
-                    <Tag fontSize="lg">{project.projectType}</Tag>
+                  <VStack gap={2} padding="40px" flex={4} alignItems="start">
+                    <Heading size="xl" color={'red.900'}>{project.name}</Heading>
+                    <Tag fontSize="lg" colorScheme='red' variant='solid'>{project.projectType}</Tag>
                     
                     <HStack flexWrap="wrap" rowGap={2}>
                     {
-                      project.techStack.map((el)=><Tag key={el} fontSize="md" bgColor={"#cc93d1"} color="black">{el}</Tag>)
+                      project.techStack.map((el)=><Tag key={el} fontSize="md" colorScheme="red" variant="outline">{el}</Tag>)
                     }
                     </HStack>
-                    <Text color="whiteAlpha.700">{project.description}</Text>
-                    <HStack fontSize="xl" alignItems="center" color="whiteAlpha.800">
-                      <Text>Project Duration :</Text> 
-                      <Tag color="black" bgColor="whiteAlpha.700" as='span'>{project.projectDuration}</Tag>
+                    <Text color="red.800">{project.description}</Text>
+                    <HStack fontSize="xl" alignItems="center" color="black">
+                      <Text color="red.800">Project Duration :</Text> 
+                      <Tag colorScheme="red" as='span'>{project.projectDuration}</Tag>
                     </HStack>
                     <HStack padding={3} gap={5}>
                       <a target="_blank" rel="noreferrer" href={project.deployLink}>
-                        <AiOutlineLink color={'white'} data-for="link" data-tip cursor="pointer" size="35px"/>
+                        <AiOutlineLink color={'#cf2129'} data-for="link" data-tip cursor="pointer" size="35px"/>
                         <ReactTooltip id="link" ><span>Deployed Link</span></ReactTooltip>
                       </a>
                      
                       <a target="_blank" rel="noreferrer" href={project.githubLink}>
-                        <BsGithub color={'white'} data-for="github" data-tip cursor="pointer" size="35px"/>
+                        <BsGithub color={'#cf2129'} data-for="github" data-tip cursor="pointer" size="35px"/>
                         <ReactTooltip id="github"><span>Github</span></ReactTooltip>
                       </a>
                       

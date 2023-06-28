@@ -6,6 +6,7 @@ import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import Stats from "./Components/Stats";
 import Projects from "./Components/Projects";
+import { Box } from "@chakra-ui/react";
 
 
 
@@ -13,7 +14,6 @@ function App() {
   return (
     <div className="App">
        <Navbar />
-       <Home />
        <About />
        <Skills />
        <Projects />

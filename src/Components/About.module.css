@@ -1,12 +1,20 @@
 .parentContainer{
-    padding : 100px 20px 20px 20px;
-    margin :auto;
-    width : 90%;
-    
-    
+   padding : 90px 100px 20px 100px;
+   position : relative;
+   z-index : 1;
 }
+
+
 .head{
     text-align : right;
     color : white;
-
+}
+.bg1{
+    height : 100%;
+    width : 30%;
+    position : absolute;
+    left : 0;
+    top : 0;
+    background : #ffe5e1;
+    z-index : -1;
 }

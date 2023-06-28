@@ -19,8 +19,8 @@ const NavbarDrawer = ({isOpen,onClose,onOpen,pdf}) => {
   
     return (
       <>
-        <Button variant="outline" onClick={onOpen}>
-          <FaBars color="white" size="20px" />
+        <Button variant="outline" colorScheme="red" onClick={onOpen}>
+          <FaBars color="#cf2129" size="20px" />
         </Button>
         <Drawer
           isOpen={isOpen}
@@ -29,16 +29,16 @@ const NavbarDrawer = ({isOpen,onClose,onOpen,pdf}) => {
           
         >
           <DrawerOverlay />
-          <DrawerContent background="linear-gradient(to left,#000,#1e141f)">
-            <DrawerCloseButton color="white" />
+          <DrawerContent background="white">
+            <DrawerCloseButton color="#cf2129" />
   
             <DrawerBody padding={"50px 20px"}>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#">Home</a></Text>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#about">About</a></Text>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#skills">Skills</a></Text>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#stats">Stats</a></Text>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#projects">Projects</a></Text>
-              <Text textAlign="center" p={4} _hover={{color: "blue.200"}} fontWeight="bold" fontSize="xl" color="white"><a href="#contact">Contact</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#">Home</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#about">About</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#skills">Skills</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#stats">Stats</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#projects">Projects</a></Text>
+              <Text textAlign="center" p={4} _hover={{color: "red.200"}} fontWeight="bold" fontSize="xl" color="#cf2129"><a href="#contact">Contact</a></Text>
               <Center p={4}>
                 <a href={pdf} download="fw21_1171_Snehil_Agrahari_Resume" >
                   <Button colorScheme="red" onClick={handleResume}>Resume</Button>

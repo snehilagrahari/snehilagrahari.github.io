@@ -1,4 +1,5 @@
-import {  Divider, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import {  Divider, Flex, Heading, Image, SimpleGrid, Text,
+Tabs, TabList, TabPanels, TabPanel, Tab } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import image1 from '../Icons/html-5.svg'
 import image2 from '../Icons/css3.svg'
@@ -12,6 +13,11 @@ import image9 from '../Icons/Typescript.png'
 import image10 from '../Icons/chakraUI.svg'
 import image11 from '../Icons/material-ui.svg'
 import image12 from '../Icons/git.svg'
+import image13 from '../Icons/vscode.svg'
+import image14 from '../Icons/angular.svg'
+import image15 from '../Icons/bootstrap.svg'
+import image16 from '../Icons/socketio.svg'
+
 
 import style from './skills.module.css'
 
@@ -60,8 +66,19 @@ const Skills = () => {
       src : image9
     },
     {
+      name : "Angular",
+      src : image14
+    }
+  ];
+
+  const tools = [
+    {
       name : 'Git',
       src : image12
+    },
+    {
+      name : "VS Code",
+      src : image13
     },
     {
       name : "Chakra-UI",
@@ -70,10 +87,20 @@ const Skills = () => {
     {
       name : "Material-UI",
       src : image11
+    },
+    {
+      name : "Angular Material",
+      src : image14
+    },
+    {
+      name : "Bootstrap",
+      src : image15
+    },
+    {
+      name : "Socket.IO",
+      src : image16
     }
-
-
-  ]
+  ];
 
   useEffect(() => {
     AOS.init();
@@ -82,18 +109,44 @@ const Skills = () => {
 
   return (
     <div id="skills" style={{width : "90%", margin:'auto', padding :" 100px 20px 40px 20px"}}>
-        <Heading size="3xl" textAlign="right" color="white">
-        <Text as="span" color="#cc93d1">S</Text>kills & <Text as="span" color="#cc93d1">T</Text>ools
-        </Heading>
-        <Divider zIndex={-1} />
-        <SimpleGrid columns={{sm : 3,md :3,lg : 4, xl : 5, '2xl' : 5 , base : 1}} gap={5} padding={3} marginTop={10}>
-            {
-              skills.map((el,i)=><Flex className={style.skillCard}  direction={{sm : 'column', md : 'column', lg : 'row', xl : 'row', '2xl' : 'row', base : 'column'}}alignItems={'center'} justifyContent="center" key={el.name} padding={3} bgColor='#1e141f' borderRadius="md" height="200px" gap={2}>
-                <Image src={el.src} alt="SKILL" maxH="150px" maxW="100px" minH="100px" minW="100px" borderRadius="xl" />
-                <Text fontSize="xl" textAlign="" fontWeight="bold" color ="white">{el.name}</Text>
-                </Flex>)
-            }
-        </SimpleGrid>
+        <Heading data-aos="fade-up" p={3} size="3xl" color="#cf2129" textAlign={"center"}>Skills & Tools</Heading>
+          <Tabs align={'center'} variant='enclosed' colorScheme='red' mt={4} isFitted >
+            <TabList>
+              <Tab _selected={{color : 'white', bg : "#cf2129"}}><Text fontSize="20px">Skills</Text></Tab>
+              <Tab _selected={{color : 'white', bg : "#cf2129"}}><Text fontSize="20px">Tools</Text></Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <SimpleGrid columns={{base : 2, sm : 2, md : 3, lg : 5 }} gap={2}>
+                {
+                  skills.map((el,i)=>{
+                    return (
+                      <Flex direction="column" padding={3} alignItems="center" gap={2} background="white" borderRadius="lg" key={i+1} border="1px solid #cf2129">
+                        <Image src={el.src} alt={el.name} width="100px" height="100px" />
+                        <Text fontSize="20px" color="">{el.name}</Text>
+                      </Flex>
+                    )
+                  })
+                }
+                </SimpleGrid>
+              </TabPanel>
+              <TabPanel>
+                <SimpleGrid columns={{base : 2, sm : 2, md : 3, lg : 5 }} gap={2}>
+                {
+                  tools.map((el,i)=>{
+                    return (
+                      <Flex direction="column" padding={3} alignItems="center" gap={2} background="white" borderRadius="lg" key={i+1} border="1px solid #cf2129">
+                        <Image src={el.src} alt={el.name} width="100px" height="100px" />
+                        <Text fontSize="20px" color="">{el.name}</Text>
+                      </Flex>
+                    )
+                  })
+                }
+                </SimpleGrid>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        
 
     </div>
   )

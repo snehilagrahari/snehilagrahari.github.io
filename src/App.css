@@ -1,5 +1,6 @@
 .App{
-    background : linear-gradient(to left,#000,#1e141f);
     padding : 0;
     margin : 0;
+    margin-top : -20px;
+    color : black;
 }
